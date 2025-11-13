@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Edu Dashboard"
+  },
+  "navigation": {
+    "home": "home",
+    "dashboard": "Dashboard",
+    "schedule": "Schedule",
+    "courses": "Courses",
+    "gradebook": "Gradebook",
+    "performance": "Performance",
+    "announcements": "Announcements"
+  },
+  "auth": {
+    "welcome": "Welcome Back",
+    "subtitle": "Log in to review your progress and upcoming assessments.",
+    "email": "Email",
+    "password": "Password",
+    "login": "Log In",
+    "loggingIn": "Logging In...",
+    "error": "Invalid email or password. Please try again.",
+    "logout": "Log Out",
+    "register": "Register",
+    "createAccount": "Create Account"
+  },
+  "dashboard": {
+    "greeting": "Hello, {{name}}",
+    "userFallback": "Student",
+    "examTime": "Exam Time",
+    "upcomingQuizzes": "Upcoming Quizzes",
+    "noQuizzes": "No upcoming quizzes scheduled.",
+    "announcementsHeading": "Announcements",
+    "noAnnouncements": "No announcements available.",
+    "startQuizHeading": "Start Quiz",
+    "selectSemester": "Select semester",
+    "primaryAction": "Start Quiz",
+    "loadMore": "View all",
+    "semesterResults": "Quizzes for {{semester}}",
+    "noSemesterSelected": "Select a semester to load available quizzes.",
+    "noSemesterQuizzes": "No quizzes found for this semester.",
+    "noSemestersAvailable": "No semesters available yet.",
+    "lastUpdated": "Last updated {{date}}"
+  },
+  "forms": {
+    "emailPlaceholder": "student@example.com",
+    "passwordPlaceholder": "Enter your password"
+  },
+  "messages": {
+    "genericError": "Something went wrong. Please try again.",
+    "loading": "Loading..."
+  }
+}

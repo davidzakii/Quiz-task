@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "لوحة المتعلم"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "schedule": "الجدول",
+    "courses": "المقررات",
+    "gradebook": "الدرجات",
+    "performance": "الأداء",
+    "announcements": "الإعلانات"
+  },
+  "auth": {
+    "welcome": "مرحباً بعودتك",
+    "subtitle": "سجّل دخولك لمتابعة تقدمك والاختبارات القادمة.",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "loggingIn": "جاري تسجيل الدخول...",
+    "error": "بيانات الدخول غير صحيحة، حاول مرة أخرى.",
+    "logout": "تسجيل الخروج",
+    "register": "تسجيل حساب",
+    "createAccount": "تسجيل حساب جديد"
+  },
+  "dashboard": {
+    "greeting": "مرحباً، {{name}}",
+    "userFallback": "طالب",
+    "examTime": "وقت الاختبار",
+    "upcomingQuizzes": "الاختبارات القادمة",
+    "noQuizzes": "لا توجد اختبارات قادمة حالياً.",
+    "announcementsHeading": "الإعلانات",
+    "noAnnouncements": "لا توجد إعلانات متاحة حالياً.",
+    "startQuizHeading": "ابدأ الاختبار",
+    "selectSemester": "اختر الفصل الدراسي",
+    "primaryAction": "ابدأ الاختبار",
+    "loadMore": "عرض الكل",
+    "semesterResults": "اختبارات الفصل {{semester}}",
+    "noSemesterSelected": "اختر فصلاً دراسياً لعرض الاختبارات المتاحة.",
+    "noSemesterQuizzes": "لا توجد اختبارات لهذا الفصل.",
+    "noSemestersAvailable": "لا توجد فصول دراسية متاحة بعد.",
+    "lastUpdated": "آخر تحديث {{date}}"
+  },
+  "forms": {
+    "emailPlaceholder": "student@example.com",
+    "passwordPlaceholder": "أدخل كلمة المرور"
+  },
+  "messages": {
+    "genericError": "حدث خطأ ما، الرجاء المحاولة مرة أخرى.",
+    "loading": "جاري التحميل..."
+  }
+}
