@@ -16,7 +16,7 @@ import { SemesterModule } from './semester/semester.module';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        uri: configService.get<string>('MONGODB_LOCAL'),
+        uri: configService.get<string>('MONGODB_ATLAS'),
       }),
       inject: [ConfigService],
     }),
