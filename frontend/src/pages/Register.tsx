@@ -1,4 +1,10 @@
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  type ChangeEvent,
+  type FormEvent,
+} from "react";
 import {
   Alert,
   Box,
@@ -9,7 +15,11 @@ import {
   Typography,
   CircularProgress,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+  type Location as RouterLocation,
+} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { useAuth } from "../context/AuthContext";
@@ -23,7 +33,8 @@ interface RegisterFormState {
 const RegisterPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { registerUser } = useAuth(); // تأكد أن عندك دالة registerUser في AuthContext
+  const location = useLocation();
+  const { registerUser, isAuthenticated } = useAuth();
   const [form, setForm] = useState<RegisterFormState>({
     name: "",
     email: "",
@@ -32,6 +43,17 @@ const RegisterPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
+  const redirectPath = useMemo(() => {
+    const state = location.state as { from?: RouterLocation } | null;
+    return state?.from?.pathname || "/dashboard";
+  }, [location.state]);
+
+  useEffect(() => {
+    if (isAuthenticated && !submitting) {
+      navigate(redirectPath, { replace: true });
+    }
+  }, [isAuthenticated, navigate, redirectPath, submitting]);
 
   const handleChange =
     (field: keyof RegisterFormState) =>
