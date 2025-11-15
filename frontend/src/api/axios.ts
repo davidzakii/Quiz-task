@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://quiz-task-production.up.railway.app";
 const TOKEN_STORAGE_KEY = "edu-dashboard-token";
 
 export const getStoredToken = () => localStorage.getItem(TOKEN_STORAGE_KEY);
@@ -41,7 +41,7 @@ apiClient.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default apiClient;
